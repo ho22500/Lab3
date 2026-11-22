@@ -26,6 +26,18 @@ yaw = deg2rad(M(:,7));
 % For this problem, you need to use |subplot.|
 
 % plot x,y,z data in subplots
+figure(1)
+subplot(3,1,1)
+plot(M(:,1), M(:,2))
+title("Position vs. Time")
+ylabel("X (cm)")
+subplot(3,1,2)
+plot(M(:,1), M(:,3))
+ylabel("Y (cm)")
+subplot(3,1,3)
+plot(M(:,1), M(:,4))
+ylabel("Z (cm)")
+xlabel("time (s)")
 %% 
 % *Problem 1b*
 % 
@@ -38,11 +50,23 @@ yaw = deg2rad(M(:,7));
 % Calculate velocities numerically
 v = zeros(N,3);
 for i=1:N-1
-    % v(i,:) = ...
+    v(i,:) = (M(i+1,2:4)-M(i,2:4))/0.01;
 end
 v(end,:) = v(end-1,:);
 
 % plot the figure
+figure(2)
+subplot(3,1,1)
+plot(M(:,1), v(:,1))
+title("Velocity vs. Time")
+ylabel("V_{x} (m/s)")
+subplot(3,1,2)
+plot(M(:,1), v(:,2))
+ylabel("V_{y} (m/s)")
+subplot(3,1,3)
+plot(M(:,1), v(:,3))
+ylabel("V_{z} (m/s)")
+xlabel("time (s)")
 %% 
 % *Problem 1c*
 % 
@@ -81,29 +105,76 @@ w = zeros(N,3);
 theta = zeros(N,1);
 for i=1:N
     Ri = R(:,:,i);
-
     % Calculate the matrix logarithm as we learned in class
     % See MR textbook eqn. 3.58
-    
+    w_theta = ECE569_MatrixLog3(Ri);
     % you will need to assign values to w(i,:) and theta(i)
-
+    [w_temp, theta(i)] = ECE569_AxisAng3(w_theta);
+    w(i,:) = ECE569_so3ToVec(w_temp);
 end
 %% 
 % Finally, plot the desired signals with appropriate labels.
 
 % subplots
+figure(3)
+subplot(4,1,1)
+plot(M(:,1), w(:,1))
+title("Orientation vs. Time")
+ylabel("\omega_{1}")
+subplot(4,1,2)
+plot(M(:,1), w(:,2))
+ylabel("\omega_{2}")
+subplot(4,1,3)
+plot(M(:,1), w(:,3))
+ylabel("\omega_{3}")
+subplot(4,1,4)
+plot(M(:,1), theta(:))
+ylabel("\theta (rad)")
+xlabel("time (s)")
 %% 
 % *Problem 1d*
 % 
 % Take a matrix logarithm of $R(t_i)^\top R(t_{i+1})$ and then do manipulations 
 % to obtain $\omega^b(t_i)$, which we defined as $\omega^b(t_i)=\frac{\omega(t_i)\theta(t_i)}{t_{i+1}-t_i}$.
-
+w_hat_theta = zeros(3,3,N);
+w = zeros(N,3);
+theta = zeros(N);
+w_b = zeros(N,3);
+for i=1:N-1
+    w_theta = ECE569_MatrixLog3(R(:,:,i)' * R(:,:,i+1));
+    [w_temp, theta(i)] = ECE569_AxisAng3(w_theta);
+    w(i,:) = ECE569_so3ToVec(w_temp);
+    w_b(i,:) = w(i,:)*theta(i)/0.01;
+end
+w_b(end,:) = w_b(end-1,:);
 % Calculate angular velocity
 % make subplot
+figure(4)
+subplot(3,1,1)
+plot(M(:,1), w_b(:,1))
+title("Angular Velocity vs. Time")
+ylabel("w^{b}_{1} (rad/s)")
+subplot(3,1,2)
+plot(M(:,1), w_b(:,2))
+ylabel("w^{b}_{2} (rad/s)")
+subplot(3,1,3)
+plot(M(:,1), w_b(:,3))
+ylabel("w^{b}_{3} (rad/s)")
+xlabel("time (s)")
 %% 
 % *Problem 1e*
 % 
 % Plot the function $d(R(t),R_d)^2 = 2Tr(I-R^\top R_d)$ 
 
 % calculate d^2
+Rd = R(:,:,end);
+d_square = zeros(N);
+for i=1:N
+    d_square(i) = 2*trace(eye(3)-R(:,:,i)'*Rd);
+end
 % plot the error from current rotation to desired rotation Rd = R(t_N)
+figure(5)
+plot(M(:,1), d_square)
+title("Squared Distance to Target Orientation")
+ylabel("d^{2}")
+xlabel("time (s)")
