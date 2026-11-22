@@ -1,0 +1,31 @@
+[1.447s] Invoking command in '/home/shay/a/ho225/ece569-fall2026/Lab3/ws3/build/metafly_description': PYTHONPATH=/home/shay/a/ho225/ece569-fall2026/Lab3/ws3/build/metafly_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/shay/a/ho225/ece569-fall2026/Lab3/ws3/install/metafly_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/shay/a/ho225/ece569-fall2026/Lab3/ws3/build/metafly_description/build --no-deps symlink_data
+[1.772s] running develop
+[2.024s] running egg_info
+[2.024s] creating metafly_description.egg-info
+[2.025s] writing metafly_description.egg-info/PKG-INFO
+[2.027s] writing dependency_links to metafly_description.egg-info/dependency_links.txt
+[2.028s] writing entry points to metafly_description.egg-info/entry_points.txt
+[2.029s] writing requirements to metafly_description.egg-info/requires.txt
+[2.029s] writing top-level names to metafly_description.egg-info/top_level.txt
+[2.033s] writing manifest file 'metafly_description.egg-info/SOURCES.txt'
+[2.039s] reading manifest file 'metafly_description.egg-info/SOURCES.txt'
+[2.040s] writing manifest file 'metafly_description.egg-info/SOURCES.txt'
+[2.042s] running build_ext
+[2.042s] Creating /home/shay/a/ho225/ece569-fall2026/Lab3/ws3/install/metafly_description/lib/python3.10/site-packages/metafly-description.egg-link (link to .)
+[2.045s] 
+[2.045s] Installed /home/shay/a/ho225/ece569-fall2026/Lab3/ws3/build/metafly_description
+[2.045s] running symlink_data
+[2.045s] creating /home/shay/a/ho225/ece569-fall2026/Lab3/ws3/install/metafly_description/share/ament_index
+[2.045s] creating /home/shay/a/ho225/ece569-fall2026/Lab3/ws3/install/metafly_description/share/ament_index/resource_index
+[2.045s] creating /home/shay/a/ho225/ece569-fall2026/Lab3/ws3/install/metafly_description/share/ament_index/resource_index/packages
+[2.046s] symbolically linking /home/shay/a/ho225/ece569-fall2026/Lab3/ws3/build/metafly_description/resource/metafly_description -> /home/shay/a/ho225/ece569-fall2026/Lab3/ws3/install/metafly_description/share/ament_index/resource_index/packages
+[2.046s] symbolically linking /home/shay/a/ho225/ece569-fall2026/Lab3/ws3/build/metafly_description/package.xml -> /home/shay/a/ho225/ece569-fall2026/Lab3/ws3/install/metafly_description/share/metafly_description
+[2.047s] creating /home/shay/a/ho225/ece569-fall2026/Lab3/ws3/install/metafly_description/share/metafly_description/launch
+[2.047s] symbolically linking /home/shay/a/ho225/ece569-fall2026/Lab3/ws3/build/metafly_description/launch/view_metafly.launch.py -> /home/shay/a/ho225/ece569-fall2026/Lab3/ws3/install/metafly_description/share/metafly_description/launch
+[2.047s] creating /home/shay/a/ho225/ece569-fall2026/Lab3/ws3/install/metafly_description/share/metafly_description/rviz
+[2.048s] symbolically linking /home/shay/a/ho225/ece569-fall2026/Lab3/ws3/build/metafly_description/rviz/metafly.rviz -> /home/shay/a/ho225/ece569-fall2026/Lab3/ws3/install/metafly_description/share/metafly_description/rviz
+[2.050s] creating /home/shay/a/ho225/ece569-fall2026/Lab3/ws3/install/metafly_description/share/metafly_description/urdf
+[2.050s] symbolically linking /home/shay/a/ho225/ece569-fall2026/Lab3/ws3/build/metafly_description/urdf/materials.xacro -> /home/shay/a/ho225/ece569-fall2026/Lab3/ws3/install/metafly_description/share/metafly_description/urdf
+[2.050s] symbolically linking /home/shay/a/ho225/ece569-fall2026/Lab3/ws3/build/metafly_description/urdf/metafly.urdf.xacro -> /home/shay/a/ho225/ece569-fall2026/Lab3/ws3/install/metafly_description/share/metafly_description/urdf
+[2.050s] symbolically linking /home/shay/a/ho225/ece569-fall2026/Lab3/ws3/build/metafly_description/urdf/metafly_macro.xacro -> /home/shay/a/ho225/ece569-fall2026/Lab3/ws3/install/metafly_description/share/metafly_description/urdf
+[2.097s] Invoked command in '/home/shay/a/ho225/ece569-fall2026/Lab3/ws3/build/metafly_description' returned '0': PYTHONPATH=/home/shay/a/ho225/ece569-fall2026/Lab3/ws3/build/metafly_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/shay/a/ho225/ece569-fall2026/Lab3/ws3/install/metafly_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/shay/a/ho225/ece569-fall2026/Lab3/ws3/build/metafly_description/build --no-deps symlink_data

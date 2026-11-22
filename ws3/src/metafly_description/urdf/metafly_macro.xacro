@@ -11,6 +11,10 @@
   <xacro:property name="wing_thickness" value="0.001" />
 
     <!-- LINKS -->
+
+    <!-- world -->
+    <link name="${prefix}world"> </link>
+
     <!-- base link -->
     <link name="${prefix}base_link">
 
@@ -73,6 +77,12 @@
       <child link="${prefix}wing2" />
       <axis xyz="0 1 0" />
       <limit effort="0" lower="${radians(-90)}" upper="${radians(90)}" velocity="0" />
+    </joint>
+    <!-- joint 3 -->
+    <joint name="${prefix}base_joint" type="fixed">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <parent link="${prefix}world" />
+      <child link="${prefix}base_link" />
     </joint>
     
     <!-- END JOINTS -->

@@ -1,0 +1,16 @@
+[1.480s] Invoking command in '/home/shay/a/ho225/ece569-fall2026/Lab3/ws3/build/metafly_description': PYTHONPATH=/home/shay/a/ho225/ece569-fall2026/Lab3/ws3/build/metafly_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/shay/a/ho225/ece569-fall2026/Lab3/ws3/install/metafly_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/shay/a/ho225/ece569-fall2026/Lab3/ws3/build/metafly_description/build --no-deps symlink_data
+[1.797s] running develop
+[2.060s] running egg_info
+[2.060s] writing metafly_description.egg-info/PKG-INFO
+[2.061s] writing dependency_links to metafly_description.egg-info/dependency_links.txt
+[2.062s] writing entry points to metafly_description.egg-info/entry_points.txt
+[2.062s] writing requirements to metafly_description.egg-info/requires.txt
+[2.063s] writing top-level names to metafly_description.egg-info/top_level.txt
+[2.067s] reading manifest file 'metafly_description.egg-info/SOURCES.txt'
+[2.068s] writing manifest file 'metafly_description.egg-info/SOURCES.txt'
+[2.072s] running build_ext
+[2.072s] Creating /home/shay/a/ho225/ece569-fall2026/Lab3/ws3/install/metafly_description/lib/python3.10/site-packages/metafly-description.egg-link (link to .)
+[2.075s] 
+[2.075s] Installed /home/shay/a/ho225/ece569-fall2026/Lab3/ws3/build/metafly_description
+[2.075s] running symlink_data
+[2.138s] Invoked command in '/home/shay/a/ho225/ece569-fall2026/Lab3/ws3/build/metafly_description' returned '0': PYTHONPATH=/home/shay/a/ho225/ece569-fall2026/Lab3/ws3/build/metafly_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/shay/a/ho225/ece569-fall2026/Lab3/ws3/install/metafly_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/shay/a/ho225/ece569-fall2026/Lab3/ws3/build/metafly_description/build --no-deps symlink_data

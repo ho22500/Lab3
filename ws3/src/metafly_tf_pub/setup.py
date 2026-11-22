@@ -14,10 +14,10 @@ setup(
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='ldihel',
-    maintainer_email='logan.dihel@gmail.com',
-    description='TODO: Package description',
-    license='TODO: License declaration',
+    maintainer='ho225',
+    maintainer_email='ho225@purdue.edu',
+    description='publisher for tf frames',
+    license='Apache-2.0',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
